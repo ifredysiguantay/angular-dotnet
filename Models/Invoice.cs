@@ -27,7 +27,11 @@ namespace API.Models
       public float Total {get;set;}
 
       public Invoice(){
+        System.Random random = new System.Random();
         this.Fecha = DateTime.UtcNow;
+        this.Correlativo = Convert.ToString(random.Next(6));
+    
+        
       }
   }
 }
