@@ -1,0 +1,37 @@
+<div class="jumbotron">
+    <div class="h1 display-4 text-center">Registro de facturas</div>
+    <div class="h3 text-center">Fredy Orlando Ixcaquic Siguantay</div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <app-payment-details-form></app-payment-details-form>
+    </div>
+    <div class="col-md-6">
+        Listado de facturas
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                    <th></th>
+                </tr>
+            </thead>
+        <tbody>
+            <tr *ngFor="let pd of service.list">
+                <td  (click)="populateForm(pd)">{{pd.nombre }}</td>
+                <td>{{pd.producto}}</td>
+                <td>{{pd.precio}}</td>
+                <td>{{pd.cantidad}}</td>
+                <td>Q.{{pd.total}}</td>
+                <td>
+                    <i class="fa fa-trash-alt fa-lg text-danger" (click)="onDelete(pd.id)"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+</div>
