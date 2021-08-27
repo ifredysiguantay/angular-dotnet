@@ -12,11 +12,22 @@ namespace API.Models
       [Column(TypeName="nvarchar(50)")]
       public string Nombre {get;set;}
      [Column(TypeName="nvarchar(50)")]
+
+     public string Nit {get;set;}
+
+    public DateTime Fecha{get;set;}
+
+    [Column(TypeName="nvarchar(50)")]
+      public string Correlativo {get;set;}
       public string Producto {get;set;}
       
       public float Precio {get;set;}
       public float Cantidad {get;set;}
 
       public float Total {get;set;}
+
+      public Invoice(){
+        this.Fecha = DateTime.UtcNow;
+      }
   }
 }
