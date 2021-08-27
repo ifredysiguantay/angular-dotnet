@@ -14,6 +14,7 @@
                 <tr>
                     <th>Nombre</th>
                     <th>Nit</th>
+                    <th>Correlativo</th>
                     <th>Fecha</th>
                     <th>Producto</th>
                     <th>Precio</th>
@@ -26,6 +27,7 @@
             <tr *ngFor="let pd of service.list">
                 <td  (click)="populateForm(pd)">{{pd.nombre }}</td>
                 <td>{{pd.nit}}</td>
+                <td>{{pd.correlativo}}</td>
                 <td>{{pd.fecha| date:'shortDate'}}</td>
                 <td>{{pd.producto}}</td>
                 <td>{{pd.precio}}</td>
