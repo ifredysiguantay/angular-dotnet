@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PaymentDetailsService } from 'src/app/shared/payment-details.service';
-import { NgForm } from '@angular/forms';
+import { FormGroup, NgForm } from '@angular/forms';
 import { PaymentDetails } from 'src/app/shared/payment-details.model';
 import { ToastrService } from 'ngx-toastr';
 @Component({
