@@ -13,6 +13,8 @@
             <thead class="thead-light">
                 <tr>
                     <th>Nombre</th>
+                    <th>Nit</th>
+                    <th>Fecha</th>
                     <th>Producto</th>
                     <th>Precio</th>
                     <th>Cantidad</th>
@@ -23,6 +25,8 @@
         <tbody>
             <tr *ngFor="let pd of service.list">
                 <td  (click)="populateForm(pd)">{{pd.nombre }}</td>
+                <td>{{pd.nit}}</td>
+                <td>{{pd.fecha| date:'shortDate'}}</td>
                 <td>{{pd.producto}}</td>
                 <td>{{pd.precio}}</td>
                 <td>{{pd.cantidad}}</td>
